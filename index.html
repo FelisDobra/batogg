@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Kimim? | Kişisel Tanıtım</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .typing-effect::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 32px;
+            height: calc(100% - 32px);
+            width: 2px;
+            background: #a777e3;
+        }
+        .logo-text {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            background: linear-gradient(90deg, #6e8efb, #a777e3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
+                    FD
+                </div>
+                <span class="logo-text text-2xl">JustBato</span>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-purple-600 transition">Hakkımda</a>
+                <a href="#contact" class="text-gray-700 hover:text-purple-600 transition">İletişim</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-purple-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pt-2 pb-4">
+            <div class="flex flex-col space-y-3">
+                <a href="#about" class="text-gray-700 hover:text-purple-600 transition py-1 border-b border-gray-100">Hakkımda</a>
+                <a href="#contact" class="text-gray-700 hover:text-purple-600 transition py-1">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-20 mt-2">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center mb-6">
+                <div class="w-32 h-32 rounded-full border-4 border-white overflow-hidden shadow-lg">
+                    <img src="https://files.kick.com/images/user/41003584/profile_image/conversion/fdbafeb8-9bd5-4e08-85b8-1ef65459f8cc-fullsize.webp" 
+                         alt="Profil Fotoğrafı" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Merhaba, Ben <span class="text-yellow-300">JustBato</span></h1>
+            <div class="text-2xl mb-6 typing-effect inline-block" id="typing-text"></div>
+            <div class="flex justify-center space-x-4">
+                <a href="#about" class="px-6 py-3 bg-white text-purple-600 rounded-full font-semibold hover:bg-gray-100 transition">Beni Tanıyın</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Hakkımda</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <p class="text-lg text-gray-600 mb-6">
+                        Selam! Ben JustBato, ama arkadaşlar bana Batın der.Kick’te içerik üreten bir yayıncıyım ve burada sizlerle birlikte eğlenmeyi, oyun oynamayı ve bazen de sadece sohbet etmeyi çok seviyorum. Bilgisayar başında vakit geçirmeyi küçüklükten beri severim; şimdi bunu sizlerle paylaşmak ayrı bir keyif.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        En çok oynadığım oyunlar arasında VALORANT ve PUBG var. Hem rekabeti hem de takım oyununu seviyorum. Ama sadece oyun değil, bazen chill yayınlar da yapıyorum; oturup dertleşiyoruz, gülüyoruz, saçmalıyoruz.
+
+Yayınlarımda samimi bir ortam kurmaya çalışıyorum. Aramıza katıldığında bunu hemen fark edeceksin zaten. Amacım kimseyi sıkmadan, doğal bir ortamda eğlenceli vakit geçirmek. Arada 18+ muhabbetler de dönüyor, o yüzden içeriklerim biraz yaş sınırlı olabilir, ama samimiyet her zaman ön planda.
+
+Eğer sen de takılacak, gülecek, belki birkaç clutch görecek ve sohbet edecek bir yer arıyorsan; yayına beklerim!
+
+🔴 kick.com/justbato
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full">#Oyuncu</span>
+                        <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">#Yayıncı</span>
+                        <span class="px-4 py-2 bg-green-100 text-green-800 rounded-full">#TakımÇalışması</span>
+                    </div>
+                </div>
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover transition">
+                            <div class="text-yellow-600 text-3xl mb-4">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="font-bold text-xl mb-2">Hobiler</h3>
+                            <p class="text-gray-600">Oyun Oynamak,Yayın yapmak</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">İletişim</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">Benimle İletişime Geçin</h3>
+                        <p class="mb-8">
+                            Yeni yayınlar, iş teklifleri veya sadece merhaba demek için aşağıdaki bilgilerden bana ulaşabilirsiniz.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Konum</h4>
+                                    <p>Denizli, Türkiye</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form class="bg-white rounded-xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Mesaj Gönder</h3>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Adınız</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Adınız">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Email adresiniz">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Mesajınız</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Mesajınız..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition">Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
+                        FD
+                    </div>
+                    <span class="logo-text text-xl">JustBato</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">
+                        <i class="fab fa-discord text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
+                <p>© <span id="current-year"></span> JustBato. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Typing Effect
+        const typingText = document.getElementById('typing-text');
+        const professions = ['Yayıncı', 'Oyun Bağımlısı', 'Bato <3 Apo'];
+        let i = 0;
+        let j = 0;
+        let currentProfession = '';
+        let isDeleting = false;
+        let isEnd = false;
+
+        function type() {
+            isEnd = false;
+            typingText.textContent = currentProfession.substring(0, j);
+
+            if (!isDeleting && j === currentProfession.length) {
+                isEnd = true;
+                isDeleting = true;
+                setTimeout(type, 2000);
+                return;
+            }
+
+            if (isDeleting && j === 0) {
+                currentProfession = professions[i];
+                isDeleting = false;
+                i = (i + 1) % professions.length;
+            }
+
+            j = isDeleting ? j - 1 : j + 1;
+            const speed = isDeleting ? 100 : isEnd ? 1000 : 150;
+            setTimeout(type, speed);
+        }
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Initialize typing effect after page load
+        window.addEventListener('load', () => {
+            currentProfession = professions[0];
+            type();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
